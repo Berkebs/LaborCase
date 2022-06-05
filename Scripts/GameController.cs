@@ -34,7 +34,7 @@ public class GameController : MonoBehaviour
             PlayerPrefs.SetInt("Level",0);
         }
         Level=PlayerPrefs.GetInt("Level");
-
+        Level = 4;
         UnitCount=LevelsNeedUnit[Level];
 
 

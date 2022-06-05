@@ -29,6 +29,7 @@ public class Unit : MonoBehaviour
             case 4:
                 this.GetComponent<SpriteRenderer>().color = Color.green;
                 break;
+                
         }
     }
    

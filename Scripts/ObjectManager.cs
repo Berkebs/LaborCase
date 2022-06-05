@@ -30,7 +30,8 @@ public class ObjectManager : MonoBehaviour
         
         int SendRandom = Random.Range(0, OpenUnit.Count);
         OpenUnit[SendRandom].SetActive(true);
-        OpenUnit[SendRandom].GetComponent<Unit>().myCode = Random.Range(0,gameController.Level+2);
+        int rndcode = gameController.Level!=4? Random.Range(0, gameController.Level + 2): Random.Range(0, gameController.Level + 1);
+        OpenUnit[SendRandom].GetComponent<Unit>().myCode = rndcode;
         OpenUnit[SendRandom].GetComponent<Unit>().TargetPos = Base.transform.position;
         OpenUnit.RemoveAt(SendRandom);
 
